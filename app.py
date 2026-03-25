@@ -19,14 +19,13 @@ def calculator():
 
         expenses.append({"name": name, "amount": amount})
 
-    # Calculate totals
     for exp in expenses:
         total_daily += exp['amount']
 
     monthly = total_daily * 30
     yearly = total_daily * 365
 
-    # Smart message
+
     if yearly > 50000:
         message = "🚨 Huge hidden spending!"
     elif yearly > 20000:
